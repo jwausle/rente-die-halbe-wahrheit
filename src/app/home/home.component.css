@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+    border: 0px;    
+}
+.column.gray{
+    background-color: gray;
+    width: 5%;
+}
+.column1 {
+    width: 75%;
+  }
+.column2 {
+    width: 20%;
+    text-align: right;
+    vertical-align: bottom;
+}

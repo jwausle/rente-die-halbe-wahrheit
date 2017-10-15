@@ -1,0 +1,152 @@
+<vertical-split-pane
+primary-component-minsize="50"
+secondary-component-minsize="100"
+local-storage-key="split-pane"
+primary-component-initialratio="0.6">
+
+<div class="split-pane-content-primary">
+    <div class="left">            
+        <table>
+            <tr>
+                <td class="column gray" rowspan="14"></td>
+                <td class="column1"><h2>Ihre Rentenversicherung {{jahr}}</h2></td>
+                <td class="column2"><img src="/assets/images/logo-rentenvers.png" height="50px"/></td>
+            </tr>        
+            <tr>
+                <td class="column1">Für</td>
+                <td class="column2">{{person.name}}</td>
+            </tr>
+            <tr>
+                <td class="column1">Versicherungsnummer</td>
+                <td class="column2">1234567890</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    In dieser Renteninformation haben wir die für Sie vom {{person.berufsBegin | date:'d.M.yyyy'}} 
+                    bis zum 1.1.{{person.jahrRenteninfo}} gespeicherten Daten und das geltende Rentenrecht berücksichtigt. 
+                    Ihre Regelaltersrente würde nach Erreichen der Regelaltersgrenze (01.01.2047) am 01.02.2047 beginnen.
+                    Änderungen in Ihren persönlichen Verhältnissen und gesetzliche Änderungen können sich auf Ihre zu erwartende Rente auswirken. 
+                    Bitte beachten Sie, dass von der Rente auch Kranken- und Pflegeversicherungsbeiträge sowie gegebenenfalls Steuern zu zahlen sind. 
+                    Auf der Rückseite finden Sie zudem wichtige Erläuterungen und zusätzliche Informationen.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>Rente wegen voller Erwerbsminderung</b>
+                </td>
+            </tr>                                            
+            <tr>
+                <td class="column1">Wären Sie heute wegen gesundheitlicher Einschränkungen voll erwerbsgemindert, bekämen Sie von uns eine monatliche Rente von:</td>
+                <td class="column2">600 €</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>Höhe Ihrer künftigen Regelaltersrente</b>
+                </td>
+            </tr>
+            <tr>
+                <td class="column1">Ihre bislang erreichte Rentenanwartschaft entspräche nach heutigem Stand einer 
+                        monatlichen Rente von:</td>
+                <td class="column2">{{person.renteBislang}} €</td>
+            </tr>
+            <tr><td></td><td></td></tr>             
+            <tr>
+                <td class="column1">Sollten bis zur Regelaltersgrenze Beiträge im Durchschnitt der letzten fünf Kalenderjahre gezahlt werden, bekämen Sie ohne Berücksichtigung von Rentenanpassungen von uns eine monatliche Rente von:</td>
+                <td class="column2">{{person.rentePrognose}} €</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>Rentenanpassung</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Aufgrund zukünftiger Rentenanpassungen kann die errechnete Rente in Höhe von {{person.renteVoll}} EUR tatsächlich höher ausfallen. 
+                    Allerdings können auch wir die Entwicklung nicht vorhersehen. Deshalb haben wir - ohne Berücksichtigung des Kaufkraftverlustes - zwei
+                    mögliche Varianten für Sie gerechnet. Beträgt der jährliche Anpassungssatz 1 Prozent, so ergäbe sich eine monatliche Rente von 
+                    etwa {{ person.renteBislang }} EUR. Bei einem jährlichen Anpassungssatz von 2 Prozent ergäbe sich eine monatliche Rente von 
+                    etwa {{ person.rentePrognose }} EUR.
+                </td>
+            </tr>
+            <tr>
+                <b>Zusätzlicher Vorsorgebedarf</b>
+                    <td colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Da die Renten im Vergleich zu den Löhnen künftig geringer steigen werden und sich somit die spätere Lücke zwischen Rente und 
+                    Erwerbseinkommen vergrößert, wird eine zusätzliche Absicherung für das Alter wichtiger ("Versorgungslücke"). Bei der ergänzenden 
+                    Altersvorsorge sollten Sie - wie bei Ihrer zu erwartenden Rente - den Kaufkraftverlust beachten.
+                </td>
+            </tr>                
+        </table>
+    </div>  
+</div>
+<button (click)="setPersonName()">Jekaterina</button>
+
+    <div class="split-pane-content-secondary">
+        <div class="right">
+            <div>
+                <table>
+                    <tr>
+                        <td><b>Realer Renteneintritt {{person.nettoEinkommen}}</b></td>
+                        <td rowspan="5"><img src="/assets/images/sanduhr-mittel.png" alt="loading ... /assets/images/sanduhr-mittel.png" /></td>
+                    </tr>
+                    <tr>
+                        <td>Das durchschnittliche Renteneintrittsalter in Deutschland liegt bei 64 Jahren (Stand 2012).</td>
+                    </tr>
+                    <tr>
+                        <td>Wann gehen Sie voraussichtlich in Rente?</td>
+                    </tr>
+                    <tr>
+                        <td>mit <input class="textbox small" #textbox type="text" [(ngModel)]="altersrente.renteneintritt" required /> Jahren und <input class="textbox small" #textbox type="text" [(ngModel)]="altersrente.renteneintrittMonat" required /> Monaten</td>
+                    </tr>
+                    <tr>
+                        <td><div class="money">{{renteBrutto | number:'1.2-2'}}</div>€ Altersrente nach Rentenkürzung um 18,0%</td>
+                    </tr>                
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td><b>Die Rente findet Netto statt</b></td>
+                        <td rowspan="2"><img src="/assets/images/steuerlast-mittel.png" alt="loading ... /assets/images/steuerlast-mittel.png" /></td>
+                    </tr>
+                    <tr>
+                        <td>Steuern und Sozialversicherungsbeiträge können die Rentenzahlungen geringer ausfallen lassen.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><div class="money">{{renteBrutto | number:'1.2-2'}}</div> € Altersrente Brutto</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><div class="money">{{einkommensSteuer | number:'1.2-2'}}</div> € Einkommensteuer inkl. Solidaritätszuschlag</td>
+                    </tr>                    
+                    <tr>
+                        <td colspan="2"><div class="money">{{versicherung | number:'1.2-2'}}</div> € Kranken- und Pflegeversicherungsbeitrag</td>
+                    </tr>                  
+                    <tr>
+                        <td colspan="2"><div class="money">{{renteNetto | number:'1.2-2'}}</div> € Altersrente Netto</td>
+                    </tr>                    
+                </table>
+            </div>
+            <div>
+                    <table>
+                        <tr>
+                            <td><b>Kaufkraftverlust</b></td>
+                            <td rowspan="3"><img src="/assets/images/baum-mittel.png" alt="loading ... /assets/images/baum-mittel.png" /></td>
+                        </tr>
+                        <tr>
+                            <td>Kalkuliert man den Kaufkraftverlust bei einer Inflationsrate von 1,66% (Ø letzte 10 Jahre) 
+                                unter Berücksichtigung der Rentenanpassungen von 0,82% (Ø letzte 10 Jahre) ist mit einem 
+                                jährlichen Verlust von <input class="textbox small" #textbox type="text" [(ngModel)]="altersrente.kaufkraftverlust" (ngModelChange)="changeKaufkraftverlust($event)"required />% zu rechnen. 
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td><div class="money">{{kaufkraftverlust | number:'1.2-2'}}</div>€ Kaufkraft der Altersrente zum Renteneintritt</td>
+                        </tr>
+                    </table>
+            </div>
+        </div>
+    </div>
+</vertical-split-pane>

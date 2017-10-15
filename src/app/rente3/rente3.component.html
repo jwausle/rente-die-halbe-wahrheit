@@ -1,0 +1,46 @@
+<h3>Hinterbliebenrente</h3>
+<div class="container">
+    <img src="/assets/images/hinterbliebene-gross.png" alt="loading ... /assets/images/hinterbliebene-gross.png" />
+    <div class="centered">
+        <table>
+            <tr>
+                <td>Witwenrentenanspruch (25%)</td><td class="money">{{wittwenRenteBrutto | number:'1.2-2'}} €</td>
+            </tr>
+            <tr>
+                <td>(kleine Witwenrente nach neuem Recht)</td><td></td>
+            </tr>
+            <tr>
+                <td>Bruttoeinkommen des Hinterbliebenen</td><td class="money">{{lohn | number:'1.2-2'}} €</td>
+            </tr>
+            <tr>
+                <td>- pauschal (40%)</td><td class="money">{{pauschal40 | number:'1.2-2'}} €</td>
+            </tr>
+            <tr>
+                <td>= anrechenbarer Lohn</td><td class="money">{{lohnAnrechenbar | number:'1.2-2'}} €</td>
+            </tr>
+            <tr>
+                <td>- Freibetrag</td><td class="money">{{freibetrag | number:'1.2-2'}} €</td>
+            </tr>
+            <tr>
+                <td>Freibetrag übersteigender Betrag</td><td class="money">{{lohnRest | number:'1.2-2'}} €</td>
+            </tr>
+            <tr>
+                <td>Anrechnungsbetrag (40%)</td><td class="money">{{lohnRest40 | number:'1.2-2'}} €</td>
+            </tr>
+            <tr>
+                <td></td><td></td>
+            </tr>
+            <tr>
+                <td>gekürzte Witwenrente</td><td class="money">{{wittwenRenteGekuerzt | number:'1.2-2'}} €</td>
+            </tr>
+            <tr>
+                <td>Witwenrente nach Abzug KV/PV</td><td class="money">{{wittwenRente | number:'1.2-2'}} €</td>
+            </tr>
+            <tr>
+                <td>Halbwaisenrente inkl. Zuschlag</td><td class="money">{{halbwaisenRente | number:'1.2-2'}} €</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
