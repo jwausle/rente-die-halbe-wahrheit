@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 var webpackMerge = require('webpack-merge');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // Webpack Config
 var webpackConfig = {
@@ -24,6 +25,10 @@ var webpackConfig = {
       }
     ),
 
+    new CopyWebpackPlugin([
+      { from: 'src/assets/images', to: 'assets/images' }
+    ]),
+
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
@@ -42,6 +47,7 @@ var webpackConfig = {
         ]
       },
       { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
+      { test: /\.(png|jpg|jpeg|gif|svg|ico)$/, loader: 'file' },
       { test: /\.html$/, loader: 'raw-loader' }
     ]
   }
