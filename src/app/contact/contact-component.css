@@ -1,14 +1,41 @@
-.form-content {
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto;
+.box { 
+  position: relative;
+  left: 71%;
+  top: -120px;
+  height: 40px;
+  z-index: 1;
 }
-.form-content .sd-form-control {
-  display: block;
-  margin-bottom: 10px;
-  width: 100%;
-  padding: 10px;
+
+.label {
+  width: 200px;
 }
-.form-content textarea.sd-form-control {
-  max-width: 100%;
+
+.rentenlogo {
+  background-image: url(/assets/images/logo-rentenvers.png); 
+  background-repeat:no-repeat; 
+  background-position: right;
+  background-size:80%; 
+  height: 63px;
+}
+
+.textright{
+  text-align: right;
+}
+
+.borderfat{
+  border-left: 30px solid #757075;
+}
+
+.borderright{
+  border-right: thin solid #757075;
+}
+
+.bordertop{
+  border-top: thin solid #757075
+}
+
+.borderspecial{
+  border-left: medium solid #757075;
+  border-bottom: thin solid #757075;
+  border-right: thin solid #757075;
 }

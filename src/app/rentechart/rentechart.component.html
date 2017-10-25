@@ -1,52 +1,53 @@
-<h3>Die Vorsorgebereiche des Lebens für {{name}}</h3>
-<table>
-    <tr>
-        <td colspan="4">Arbeitskraftverlust</td>
-        <td>Unflall</td>
-        <td>Tod</td>
-        <td>Alter</td>        
-    </tr>
-    <tr>
-        <td></td>
-        <td><img src="/assets/images/krankengeld-klein.png"/></td>
-        <td><img src="/assets/images/erwerbsminderung-klein.png"/></td>
-        <td><img src="/assets/images/pflegefall-klein.png"/></td>
-        <td><img src="/assets/images/invaliditaet-klein.png"/></td>
-        <td><img src="/assets/images/hinterbliebene-klein.png"/></td>
-        <td><img src="/assets/images/langlebigkeit-klein.png"/></td>
-    </tr>
-    <tr>
-        <td colspan="7">
-            <ngx-charts-bar-vertical
-                [view]="view"
-                [scheme]="colorScheme"
-                [results]="single"
-                [gradient]="gradient"
-                [xAxis]="showXAxis"
-                [yAxis]="showYAxis"
-                [legend]="showLegend"
-                [showXAxisLabel]="showXAxisLabel"
-                [showYAxisLabel]="showYAxisLabel"
-                [xAxisLabel]="xAxisLabel"
-                [yAxisLabel]="yAxisLabel"
-                (select)="onSelect($event)">
-            </ngx-charts-bar-vertical>
-        </td>
-    </tr>
-    <tr>
-        <td>Lohnfortzahlung</td>
-        <td>Krankengeld</td>
-        <td>Erwerbsminderung</td>
-        <td>Pflegefall</td>
-        <td>Invalidität</td>
-        <td>Hinterbliebene</td>
-        <td>Langlebigkeit</td>
-    </tr>
-    <tr>
-        <td>bis 6 Wochen</td>
-        <td>7.-78. Woche</td>
-        <td colspan="4">Einkommensverlust mit ungewisser Dauer</td>
-        <td>> 64 Jahre</td>
-    </tr>
-</table>
-
+<div class="container-fluid borderfat">
+    <h3>Die Vorsorgebereiche des Lebens für {{name}}</h3>
+    <table>
+        <tr>
+            <td colspan="4">Arbeitskraftverlust</td>
+            <td>Unflall</td>
+            <td>Tod</td>
+            <td>Alter</td>        
+        </tr>
+        <tr>
+            <td></td>
+            <td><img src="/assets/images/krankengeld-klein.png"/></td>
+            <td><img src="/assets/images/erwerbsminderung-klein.png"/></td>
+            <td><img src="/assets/images/pflegefall-klein.png"/></td>
+            <td><img src="/assets/images/invaliditaet-klein.png"/></td>
+            <td><img src="/assets/images/hinterbliebene-klein.png"/></td>
+            <td><img src="/assets/images/langlebigkeit-klein.png"/></td>
+        </tr>
+        <tr>
+            <td colspan="7">
+                <ngx-charts-bar-vertical
+                    [view]="view"
+                    [scheme]="colorScheme"
+                    [results]="single"
+                    [gradient]="gradient"
+                    [xAxis]="showXAxis"
+                    [yAxis]="showYAxis"
+                    [legend]="showLegend"
+                    [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel"
+                    [xAxisLabel]="xAxisLabel"
+                    [yAxisLabel]="yAxisLabel"
+                    (select)="onSelect($event)">
+                </ngx-charts-bar-vertical>
+            </td>
+        </tr>
+        <tr>
+            <td>Lohnfortzahlung</td>
+            <td>Krankengeld</td>
+            <td>Erwerbsminderung</td>
+            <td>Pflegefall</td>
+            <td>Invalidität</td>
+            <td>Hinterbliebene</td>
+            <td>Langlebigkeit</td>
+        </tr>
+        <tr>
+            <td>bis 6 Wochen</td>
+            <td>7.-78. Woche</td>
+            <td colspan="4">Einkommensverlust mit ungewisser Dauer</td>
+            <td>> 64 Jahre</td>
+        </tr>
+    </table>
+</div>

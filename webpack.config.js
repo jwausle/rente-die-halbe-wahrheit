@@ -7,6 +7,10 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 // Webpack Config
 var webpackConfig = {
   entry: {
+    vendor: [
+      'jquery',
+      'bootstrap/dist/js/bootstrap'
+    ],
     'main': './src/main.browser.ts',
   },
 
@@ -32,7 +36,12 @@ var webpackConfig = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-
+   
+    new webpack.ProvidePlugin({   
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
+    })
   ],
 
   module: {
@@ -47,6 +56,13 @@ var webpackConfig = {
         ]
       },
       { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
+/*      { test: /\.css$/, 
+        use: 
+        [ 
+            { loader: "style-loader" },
+            { loader: "css-loader", options: { modules: true } }
+        ]
+      },*/
       { test: /\.(png|jpg|jpeg|gif|svg|ico)$/, loader: 'file' },
       { test: /\.html$/, loader: 'raw-loader' }
     ]
