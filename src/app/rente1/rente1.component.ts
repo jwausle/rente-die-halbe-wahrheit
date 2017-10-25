@@ -5,8 +5,10 @@ import { VersicherungDao } from '../data/versicherung.dao';
 
 @Component({
   selector: 'rente1',
-  styleUrls: ['./rente1.component.css'],
-  templateUrl: './rente1.component.html'
+  //styleUrls: ['./rente1.component.css'],
+  styles: [require('./rente1.component.css')],
+  //templateUrl: './rente1.component.html'
+  template: require('./rente1.component.html')
 })
 
 export class AltersrenteComponent implements OnChanges, OnInit{ 

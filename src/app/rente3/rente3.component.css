@@ -1,21 +1,23 @@
 .container {
     position: relative;
-    text-align: center;
     color: white;
     z-index: -1;
 }
 .centered {
-    position: absolute;
-    top: 52%;
-    left: 47%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: -320px;
+    left: 20%;
     color: black;
     z-index: 1;
     text-align: left;
     vertical-align: top;
-    font-size: 70%;
+    font-size: 80%;
 }
 
 .money {
     text-align: right;
+}
+
+.borderfat{
+    border-left: 15px solid #e7e7e7;
 }

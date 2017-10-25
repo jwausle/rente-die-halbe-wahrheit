@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 import { SplitPaneModule } from 'ng2-split-pane/lib/ng2-split-pane';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { rootRouterConfig } from './app.routes';
 import { AppComponent } from './app.component';
@@ -51,6 +52,7 @@ import { HinterbliebenenRenteDao } from './rente3/hinterbliebenenrente.dao';
     HttpModule,
     SplitPaneModule,
     NgxChartsModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [

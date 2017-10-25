@@ -4,8 +4,10 @@ import { PersonDao, Person } from '../data/person.dao';
 
 @Component({
   selector: 'rente3',
-  styleUrls: ['./rente3.component.css'],
-  templateUrl: './rente3.component.html'
+  //styleUrls: ['./rente3.component.css'],
+  styles: [require('./rente3.component.css')],
+  //templateUrl: './rente3.component.html'
+  template: require('./rente3.component.html')
 })
 export class HinterbliebenenrenteComponent implements OnInit{ 
   private person: Person;

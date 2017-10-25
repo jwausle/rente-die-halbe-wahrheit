@@ -9,21 +9,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'rentechart',
-  styleUrls: ['./rentechart.component.css'],
-  templateUrl: './rentechart.component.html'
+  //styleUrls: ['./rentechart.component.css'],
+  styles: [require('./rentechart.component.css')],
+  //templateUrl: './rentechart.component.html'
+  template: require('./rentechart.component.html')
 })
 export class AuswertungComponent implements OnInit { 
   private alterrente: Altersrente;
   private person: Person;
   private name: string;
-  
-  single: any[] = [
-    { "name": "Germany", "value": 8940000 },
-    { "name": "USA",     "value": 5000000 },
-    { "name": "France",  "value": 7200000 }
-  ];
-  
-  view: any[] = [700, 400];
+
+  private single: any[]  
+  private view: any[] = [700, 400];
   
   // options
   showXAxis = false;

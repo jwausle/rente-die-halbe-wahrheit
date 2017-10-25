@@ -1,16 +1,15 @@
 <h3>R E N T E N I N F O R M A T I O N  -  die "halbe" Wahrheit!?</h3>
-<nav>
-	<a [routerLink]="['/']">Home</a>
-  |
-	<a [routerLink]="['/rente1']">Altersrente</a>
-  |
-  <a [routerLink]="['/rente2']">Erwerbsminderungsrente</a>  
-  |
-  <a [routerLink]="['/rente3']">Hinterbliebenenrente</a>
-  |
-	<a [routerLink]="['/rentechart']">Auswertung</a>
-  |
-	<a [routerLink]="['/hinweis']">Erläuterung</a>
+<nav class="navbar navbar-default" style="margin-bottom: 0px;">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="active"><a [routerLink]="['/']">Home</a></li>
+            <li><a [routerLink]="['/rente1']">Altersrente</a></li>
+            <li><a [routerLink]="['/rente2']">Erwerbsminderungsrente</a></li>
+            <li><a [routerLink]="['/rente3']">Hinterbliebenenrente</a></li>
+            <li><a [routerLink]="['/rentechart']">Auswertung</a></li>
+            <li><a [routerLink]="['/hinweis']">Erläuterung</a></li>
+        </ul>
+    </div>
 </nav>
 
 <main>

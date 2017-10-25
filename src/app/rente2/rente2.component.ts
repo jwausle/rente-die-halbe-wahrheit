@@ -6,8 +6,10 @@ import { VersicherungDao } from '../data/versicherung.dao';
 
 @Component({
   selector: 'rente2',
-  styleUrls: ['./rente2.component.css'],
-  templateUrl: './rente2.component.html'
+  //styleUrls: ['./rente2.component.css'],
+  styles: [require('./rente2.component.css')],
+  //templateUrl: './rente2.component.html'
+  template: require('./rente2.component.html')
 })
 export class ErwerbsminderungsrenteComponent implements OnInit{ 
   private erwerbsminderungsRenteDao: ErwerbsminderungsRenteDao;
