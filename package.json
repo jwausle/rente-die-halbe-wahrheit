@@ -1,91 +1,42 @@
 {
-  "name": "angular2-seed",
+  "name": "rente-ts",
   "version": "1.0.0",
-  "description": "A simple starter Angular2 project",
+  "description": "Der Rentenbscheid und seine kleinen Ecken und Kanten",
+  "productName": "Rente die halbe Wahrheit",
+  "cordovaId": "rente.app",
+  "author": "Jan Winter <jan.winter@itemis.de>",
+  "private": true,
   "scripts": {
-    "build": "rimraf dist && webpack --progress",
-    "watch": "npm run build -- --watch",
-    "watch2": "tsc --watch",
-    "server": "webpack-dev-server --inline --progress --port 3000 --content-base src",
-    "start": "npm run server"
+    "lint": "eslint --ext .js,.vue src",
+    "test": "echo \"No test specified\" && exit 0"
   },
-  "contributors": [
-    "Rob Wormald <robwormald@gmail.com>",
-    "PatrickJS <github@gdi2290.com>"
-  ],
-  "license": "MIT",
   "dependencies": {
-    "@angular/animations": "4.4.5",
-    "@angular/cli": "^1.4.9",
-    "@angular/common": "~4.4.5",
-    "@angular/compiler": "~4.4.5",
-    "@angular/compiler-cli": "~4.4.5",
-    "@angular/core": "^4.4.5",
-    "@angular/forms": "~4.4.5",
-    "@angular/http": "~4.4.5",
-    "@angular/platform-browser": "~4.4.5",
-    "@angular/platform-browser-dynamic": "~4.4.5",
-    "@angular/platform-server": "~4.4.5",
-    "@angular/router": "~4.4.5",
-    "@angular/upgrade": "~4.4.5",
-    "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.5",
-    "@swimlane/ngx-charts": "^6.0.1",
-    "@types/core-js": "^0.9.39",
-    "@types/jasmine": "^2.5.37",
-    "@types/node": "^7.0.13",
-    "angular-in-memory-web-api": "^0.3.1",
-    "bootstrap": "^3.3.7",
-    "core-js": "^2.4.1",
-    "d3": "^4.11.0",
-    "ie-shim": "^0.1.0",
-    "jasmine": "^2.8.0",
-    "jasmine-ajax": "^3.3.1",
-    "jasmine-core": "^2.8.0",
-    "jquery": "^3.2.1",
-    "karma": "^1.7.1",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-jasmine": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "karma-requirejs": "^1.1.0",
-    "karma-typescript": "^3.0.7",
-    "karma-typescript-angular2-transform": "^1.0.2",
-    "ng2-datepicker": "^2.1.2",
-    "ng2-datepicker-bootstrap": "^1.0.0",
-    "ng2-split-pane": "1.4.0",
-    "reflect-metadata": "^0.1.9",
-    "requirejs": "^2.3.5",
-    "rxjs": "5.4.3",
-    "zone.js": "^0.8.8"
+    "autoprefixer": "^9.3.1",
+    "vue-moment": "^4.0.0",
+    "vuelidate": "^0.7.4"
   },
   "devDependencies": {
-    "angular2-router-loader": "^0.3.4",
-    "angular2-template-loader": "^0.6.0",
-    "awesome-typescript-loader": "^3.1.2",
-    "copy-webpack-plugin": "^4.1.1",
-    "css-loader": "^0.26.0",
-    "gulp": "^3.9.1",
-    "html-webpack-plugin": "^2.28.0",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "raw-loader": "^0.5.1",
-    "rimraf": "^2.5.4",
-    "to-string-loader": "^1.1.4",
-    "typescript": "~2.5.3",
-    "webpack": "^2.4.1",
-    "webpack-dev-server": "2.4.2",
-    "webpack-merge": "^4.1.0"
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.3.0",
+    "quasar-cli": "^0.17.0",
+    "strip-ansi": "=3.0.1"
   },
-  "keywords": [
-    "Angular2",
-    "angular2-seed",
-    "official angular 2 seed",
-    "official angular2 seed"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/angular/angular2-seed.git"
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
   },
-  "bugs": {
-    "url": "https://github.com/angular/angular2-seed/issues"
-  },
-  "homepage": "https://github.com/angular/angular2-seed#readme"
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
 }
